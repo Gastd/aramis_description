@@ -32,7 +32,7 @@
                     <origin rpy="0 1.57 1.57"  xyz="0.170 0.087 0.0"/>
     </kinect_camera_v0>
 
-    <camera_usb name="camera_usb" parent="suporte_kinect">
+    <camera_usb name="usb_camera" parent="suporte_kinect">
                     <!-- <origin rpy="0 -3.9246 1.57"  xyz="0.170 0.067 -0.035"/> -->
                     <origin rpy="1.57 0 3.14"  xyz="0.275 0.0 0.060"/>
     </camera_usb>
