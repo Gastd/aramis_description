@@ -40,7 +40,7 @@
         <link name="${name}_optical_frame" />
         <joint name="${name}_optical_joint" type="fixed">
             <!-- <origin xyz="-0.025 0.038 0.024" rpy="0 -1.57 0"/> -->
-            <origin xyz="0.025 0.026 0.024" rpy="0 -1.57 0"/>
+            <origin xyz="0.025 0.026 0.024" rpy="0 0 0"/>
             <parent link="${name}_frame" />
             <child link="${name}_optical_frame" />
         </joint>
