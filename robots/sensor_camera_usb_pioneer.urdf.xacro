@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<root xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+      xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+      xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+      xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="camera_usb" params="name parent *origin">
+        <link name="${name}_frame">
+            <inertial>
+                <mass value="0.1" />
+                <origin xyz="0 0 0" rpy="0 0 1.57"/>
+                <inertia ixx="0.01"  ixy="0.0"  ixz="0.0"
+                         iyy="0.01"  iyz="0.0"
+                         izz="0.01" />
+            </inertial>
+            <visual>
+                <!-- <origin xyz="0.0 0.012 0" rpy="0 0 0"/> -->
+                <origin xyz="0.0 0.0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://aramis_description/meshes/ffmv_usb_camera.STL" scale="0.001 0.001 0.001" />
+                </geometry>
+                <material name="grey">
+                    <color rgba="0.92 0.92 0.92 1" />
+                </material>
+            </visual>
+            <collision>
+                <!-- <origin xyz="0.0 0.012 0" rpy="0 0 0"/> -->
+                <origin xyz="0.0 0.0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://aramis_description/meshes/ffmv_usb_camera.STL" scale="0.001 0.001 0.001" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="${name}_frame_joit" type="fixed">
+            <insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${name}_frame" />
+        </joint>
+
+        <link name="${name}_optical_frame" />
+        <joint name="${name}_optical_joint" type="fixed">
+            <!-- <origin xyz="-0.025 0.038 0.024" rpy="0 -1.57 0"/> -->
+            <origin xyz="0.025 0.026 0.024" rpy="0 0 0"/>
+            <parent link="${name}_frame" />
+            <child link="${name}_optical_frame" />
+        </joint>
+
+    </xacro:macro>
+
+
+</root>
