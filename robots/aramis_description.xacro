@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="aramis_description">
 
-    <xacro:include filename="$(find p2os_urdf)/defs/pioneer3dx.xacro"/>
+    <xacro:include filename="$(find aramis_description)/robots/pioneer3dx.xacro"/>
     <xacro:include filename="$(find aramis_description)/robots/suporte_aramis_description.URDF"/>
     <xacro:include filename="$(find aramis_description)/robots/sensor_sonar_pioneer.urdf.xacro"/>
     <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.urdf.xacro" />
