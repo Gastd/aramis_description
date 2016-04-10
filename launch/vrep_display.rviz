@@ -58,11 +58,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        back_sonar:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         back_sonar_range_frame:
           Alpha: 1
           Show Axes: false
@@ -71,6 +66,11 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        battery0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         center_hubcap:
           Alpha: 1
           Show Axes: false
@@ -82,11 +82,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         chassis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        front_sonar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -116,6 +111,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sonar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -224,11 +224,20 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        top_plate:
+        top:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        usb_camera_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        usb_camera_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -242,7 +251,7 @@ Visualization Manager:
           Color: 255; 25; 0
           Enabled: true
           Keep: 100
-          Length: 0.5
+          Length: 0.1
           Name: Odometry
           Position Tolerance: 0.1
           Topic: /odom
