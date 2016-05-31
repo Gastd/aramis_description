@@ -9,10 +9,10 @@
     <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.urdf.xacro" />
     <xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
 
-    <xacro:p3dx_front suffix="left" reflect="1"/>
-    <xacro:p3dx_front suffix="right" reflect="-1"/>
-    <xacro:p3dx_back suffix="left" reflect="1"/>
-    <xacro:p3dx_back suffix="right" reflect="-1"/>
+    <!-- <xacro:p3dx_front suffix="left" reflect="1"/> -->
+    <!-- <xacro:p3dx_front suffix="right" reflect="-1"/> -->
+    <!-- <xacro:p3dx_back suffix="left" reflect="1"/> -->
+    <!-- <xacro:p3dx_back suffix="right" reflect="-1"/> -->
 
     <!-- 
     <joint name="pioneer2cyton" type="fixed">
@@ -76,7 +76,7 @@
         <child link="back_sonar_range_frame" />
     </joint>
 
-    <xacro:p3dx_gazebo_ext/> 
+    <!-- <xacro:p3dx_gazebo_ext/>  -->
 
 
 </robot>
